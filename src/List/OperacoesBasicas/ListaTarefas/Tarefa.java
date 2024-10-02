@@ -1,4 +1,4 @@
-package List.OperacoesBasicas;
+package List.OperacoesBasicas.ListaTarefas;
 
 public class Tarefa {
     private String descricao;
@@ -17,4 +17,4 @@ public class Tarefa {
     public String toString(){
         return descricao;
     }
-}
+}   
