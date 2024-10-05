@@ -6,7 +6,7 @@ public class OrdenacaoNumeros {
     List<Integer> listaInteiros;
 
     public OrdenacaoNumeros(){
-        listaInteiros = new ArrayList<Integer>();
+        this.listaInteiros = new ArrayList<Integer>();
     }
 
     public void adicionarNumero(int numero){
@@ -15,9 +15,12 @@ public class OrdenacaoNumeros {
     }
     
     public List<Integer> ordenarAscendente(){
+        
         List<Integer> listaOrdenadaAscendente = new ArrayList<>(listaInteiros);
 
-        Collections.sort(listaOrdenadaAscendente);
+        if( !listaInteiros.isEmpty()){
+            Collections.sort(listaOrdenadaAscendente);
+        }
 
         return listaOrdenadaAscendente;
     }
@@ -25,8 +28,9 @@ public class OrdenacaoNumeros {
     public List<Integer> ordenarDescendente(){
         List<Integer> listaOrdenadadecrescendente = new ArrayList<>(listaInteiros);
 
-        Collections.sort(listaOrdenadadecrescendente, Collections.reverseOrder());
-
+        if( !listaInteiros.isEmpty()){
+            listaOrdenadadecrescendente.sort(Collections.reverseOrder());
+        }    
         return listaOrdenadadecrescendente;
     }
 
